@@ -7,5 +7,6 @@ defmodule DotaAPIWeb.Router do
 
   scope "/api", DotaAPIWeb do
     pipe_through :api
+    resources "/heroes", HeroController, except: [:new, :edit]
   end
 end
